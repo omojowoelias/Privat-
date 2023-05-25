@@ -1,16 +1,16 @@
 //Get modal element
 var modal = document.getElementById("simpleModal");
 //Get open modal button
-var modalBtn = document.getElementById("modalBtn");
+var uploadBtn = document.getElementById("uploadBtn");
 //Get close button
 var closeBtn = document.getElementsByClassName("closeBtn")[0];
 
 //Listen to our Event
-modalBtn.addEventListener("click", openModal);
+uploadBtn.addEventListener("click", openModal);
 //Listen to our Event
 closeBtn.addEventListener("click", closeModal);
 //Listen for Outside click
-window.addEventListener("click", outsideClick);
+window.addEventListener("click", windowClick);
 
 //function to open modal 
 function openModal(){
@@ -22,7 +22,7 @@ function closeModal(){
 }
 
 //function to close modal if outside click
-function outsideClick(e){
+function windowClick(e){
     if(e.target == modal){
         modal.style.display = "none";
     }
